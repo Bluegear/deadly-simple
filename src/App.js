@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+require("font-awesome/css/font-awesome.min.css");
+require("bulma/css/bulma.css");
 import './App.css';
 import Main from './Main';
 import Header from './Header';
