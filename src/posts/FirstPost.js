@@ -1,14 +1,36 @@
 import React, { Component } from 'react';
-var MarkdownFile = require('react-markdown-file');
+import marked from 'marked';
 
 class FirstPost extends Component {
-  render() {
-    return (
-      <div className="FirstPost post content">
-        <MarkdownFile fileName='firstpost.md'/>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
+    componentWillMount() {
+        const readmePath = require("./firstpost.md");
+      
+        fetch(readmePath)
+          .then(response => {
+            return response.text()
+          })
+          .then(text => {
+            this.setState({
+              markdown: marked(text)
+            })
+          })
+      }
+
+    render() {
+        const { markdown } = this.state;
+        return (
+            <div className="FirstPost post content">
+                <section>
+                    <article dangerouslySetInnerHTML={{__html: markdown}}></article>
+                </section>
+            </div>
+        );
+    }
 }
 
 export default FirstPost;

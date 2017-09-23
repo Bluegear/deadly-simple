@@ -5,6 +5,7 @@
   "dependencies": {
     "bulma": "^0.5.3",
     "font-awesome": "^4.7.0",
+    "marked": "^0.3.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-markdown-file": "0.0.4",
