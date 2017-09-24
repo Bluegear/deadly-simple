@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import marked from 'marked';
 
-class FirstPost extends Component {
+class Post extends Component {
     constructor(props) {
         super(props);
         this.state = {};
     }
 
     componentWillMount() {
-        const readmePath = require("./firstpost.md");
+        console.log(this.props.match.params.filename);
+        const mdPath = require("./" + this.props.match.params.filename + ".md");
       
-        fetch(readmePath)
+        fetch(mdPath)
           .then(response => {
             return response.text()
           })
@@ -24,7 +25,7 @@ class FirstPost extends Component {
     render() {
         const { markdown } = this.state;
         return (
-            <div className="FirstPost post content">
+            <div className="Post post content">
                 <section>
                     <article dangerouslySetInnerHTML={{__html: markdown}}></article>
                 </section>
@@ -33,4 +34,4 @@ class FirstPost extends Component {
     }
 }
 
-export default FirstPost;
+export default Post;

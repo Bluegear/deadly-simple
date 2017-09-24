@@ -5,3 +5,23 @@
   margin: auto;
   font-size: 21px;
 }
+
+.post.content h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.6666em;
+}
+
+.post.content h3 {
+  font-size: 1.25em;
+  margin-bottom: 0.8em;
+}
+
+.post.content h4 {
+  font-size: 1.125em;
+  margin-bottom: 0.8888em;
+}
+
+.post.content h5 {
+  font-size: 1em;
+  margin-bottom: 1em;
+}

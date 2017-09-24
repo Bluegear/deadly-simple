@@ -4,7 +4,11 @@ class Header extends Component {
   render() {
     return (
       <div className="Header">
-        <a href="/">Home</a>
+        <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
+          <div className="navbar-brand">
+            <a className="navbar-item" href="/">Home</a>
+          </div>
+        </nav>
       </div>
     );
   }

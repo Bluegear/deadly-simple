@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Home from './Home';
-import FirstPost from './posts/FirstPost';
+import Post from './posts/Post';
 import { Switch, Route } from 'react-router-dom';
 
 class Main extends Component {
@@ -9,7 +9,7 @@ class Main extends Component {
       <main>
         <Switch>
           <Route exact path='/' component={Home}/>
-          <Route exact path='/posts/first-post' component={FirstPost}/>
+          <Route path='/posts/:filename' component={Post}/>
         </Switch>
       </main>
     );
