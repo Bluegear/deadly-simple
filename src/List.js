@@ -4,7 +4,10 @@ class List extends Component {
   render() {
     return (
       <div className="List">
-        <a href="/posts/firstpost">First post</a>
+        <ul>
+          <li><a href="/posts/what-is-ico">ICO คืออะไร?</a></li>
+          <li><a href="/posts/firstpost">First post</a></li>
+        </ul>
       </div>
     );
   }
