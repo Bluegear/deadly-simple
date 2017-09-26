@@ -7,7 +7,7 @@ class Post extends Component {
         this.state = {};
     }
 
-    componentWillMount() {
+    componentDidMount() {
         console.log(this.props.match.params.filename);
         const mdPath = require("./" + this.props.match.params.filename + ".md");
       
